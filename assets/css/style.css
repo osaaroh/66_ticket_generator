@@ -1,0 +1,458 @@
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../fonts/Inconsolata-VariableFont_wdth,wght.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inconsolata", sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+  
+body {
+  background-image: url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-squiggly-line-bottom-desktop.svg"), url("../images/pattern-circle.svg"), url("../images/background-mobile.png");
+  background-repeat: no-repeat;
+  background-position: right 55px, -17px -95px, center, left bottom, 70% 54%, right bottom;
+  background-size: 300px, 190px, auto, 250px, 190px, cover;
+  padding-bottom: 60px;
+  min-height: 100vh;
+}
+body .container {
+  width: 100%;
+  padding: 1rem;
+}
+.brand-logo{
+  text-align: center;
+  margin: 10px 0 50px 0;
+}
+.brand-logo svg {
+  width: 200px;
+}
+header {
+    padding: 7px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+header h2 {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    font-size: 58px;
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+header p {
+    font-size: 24px;
+    font-weight: 400;
+    padding: 4px 10px;
+    color: hsl(252, 6%, 83%);
+    word-spacing: 1px;
+  }
+  form {
+    width: min(470px, 100%);
+    margin: 2.2rem auto 0 auto;
+  }
+  .form-group {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .form-group .error {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 4px;
+    display: none;
+  }
+  .form-group .error p {
+    color: hsl(7, 88%, 67%) !important;
+    font-size: 0.7rem;
+  }
+  .form-group .error svg path {
+    stroke: hsl(7, 88%, 67%);
+  }
+  .form-group .instruction-2 {
+    display: flex;
+  }
+  .form-group .instruction-2 p {
+    color: hsl(0, 0%, 100%) !important;
+  }
+  .form-group .instruction-2 svg path {
+    stroke: hsl(0, 0%, 100%) !important;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .form-group input::-moz-placeholder {
+    color: hsl(252, 6%, 83%);
+    font-weight: 500;
+  }
+  .form-group input::placeholder {
+    color: hsl(252, 6%, 83%);
+    font-weight: 500;
+  }
+  .form-group .input-wrapper {
+    width: 100%;
+    padding: 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    border-radius: 12px;
+  }
+  .form-group .input-wrapper input[type=text] {
+    width: 100%;
+    margin: 2px;
+    padding: 12px;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    color: hsl(0, 0%, 100%) !important;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    font-weight: 500;
+    border: 1px solid none;
+    transition: border-color 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .form-group .input-wrapper input[type=text]:focus {
+    border-color: hsl(252, 6%, 83%);
+    background: hsl(249, 42%, 19%);
+    filter: opacity(0.8);
+  }
+  .form-group .input-wrapper .upload-avatar {
+    border: 1px dashed hsl(252, 6%, 83%);
+    background: hsl(249, 42%, 19%);
+    width: 100%;
+    cursor: pointer;
+    margin: 2px;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .form-group .input-wrapper .upload-avatar:hover {
+    filter: opacity(0.7);
+  }
+  .form-group .input-wrapper .upload-avatar:active {
+    filter: opacity(1);
+    border: 1px solid hsl(252, 6%, 83%);
+  }
+  .form-group .input-wrapper .upload-avatar input {
+    display: none;
+  }
+  .form-group .input-wrapper .upload-avatar .upload-icon {
+    width: 50px;
+    height: 48px;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background: hsl(245, 19%, 35%);
+    border: 1px solid hsl(245, 15%, 58%);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .form-group .input-wrapper .upload-avatar .upload-icon svg {
+    position: absolute;
+    margin: auto;
+    inset: 0;
+  }
+  .form-group .input-wrapper .upload-avatar .upload-icon img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: inherit;
+    display: none;
+  }
+  .form-group .input-wrapper .upload-avatar .instruction {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  .form-group .input-wrapper:has(input[type=text]) {
+    border: 1px solid hsl(252, 6%, 83%);
+    background: hsl(249, 42%, 19%);
+    filter: opacity(0.8);
+    transition: all 0.3s ease-in-out;
+  }
+  .form-group .input-wrapper:has(input[type=text]):hover {
+    background: hsl(245, 19%, 35%);
+  }
+  .form-group .input-wrapper:has(input[type=text]:focus) {
+    background: transparent;
+  }
+  .form-group .input-wrapper:has(input[type=file]) {
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+  }
+  .form-group .input-wrapper:has(input[type=file]:hover) {
+    border-color: hsl(252, 6%, 83%);
+  }
+  .form-group .input-wrapper:has(input[type=file]:focus) {
+    border-color: hsl(252, 6%, 83%);
+  }
+  .form-group .input-wrapper:has(button[type=submit]) {
+    background-color: hsl(7, 88%, 67%);
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+  }
+  .form-group .input-wrapper:has(button[type=submit]:focus) {
+    border-color: hsl(0, 0%, 100%);
+    background: transparent;
+  }
+  form .error-wrapper {
+    padding: 0 !important;
+  }
+  form .error-wrapper input {
+    border: 1px solid hsl(7, 88%, 67%) !important;
+    margin: 0 !important;
+  }
+  .form-group:first-child #remove-change-buttons {
+    display: none;
+  }
+  .form-group:first-child #remove-change-buttons button {
+    padding: 7px 11px 4px 11px;
+    border: none;
+    border-radius: 6px;
+    background: hsl(245, 19%, 35%);
+    cursor: pointer;
+  }
+  .form-group:first-child #remove-change-buttons button:hover {
+    text-decoration: underline;
+  }
+  .form-group:first-child.uploaded button {
+    display: inline;
+  }
+  .form-group:last-child button {
+    width: 100%;
+    padding: 11px 10px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: hsl(248, 70%, 10%);
+    font-weight: 900;
+    margin: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+  }
+  .form-group:last-child button:focus {
+    background-color: hsl(7, 88%, 67%);
+  }
+  .ticket-container header {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+  .ticket-container header h1 {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    font-size: 58px;
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+  .ticket-container header h1 .name-group {
+    background-image: linear-gradient(to right, hsl(7, 88%, 67%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+            background-clip: text;
+    text-transform: capitalize;
+    color: transparent;
+  }
+  .ticket-container main #notification {
+    text-align: center;
+    margin: 0 auto 40px auto;
+    padding: 0 2px 20px 2px;
+    /* font-size: 1.13em; */
+    font-weight: 600;
+    max-width: 500px;
+    /* line-height: 18px; */
+
+    font-size: 24px;
+    font-weight: 400;
+    padding: 4px 10px;
+    word-spacing: 1px;
+  }
+  .ticket-container main #notification #your-email {
+    color: hsl(7, 88%, 67%);
+  }
+  .ticket-container main .ticket {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-between;
+    gap: auto;
+    background-image: url("../images/pattern-ticket.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 557px;
+    height: 260px;
+    padding: 15px;
+    border-radius: 7px;
+  }
+  .ticket-container main .main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .ticket-container main .ticket-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 4px;
+  }
+  .ticket-container main .ticket-logo svg {
+    width: 225px;
+    margin-top: 1rem;
+  }
+  .ticket-container main .ticket-logo #ticket-date {
+    color: hsl(252, 6%, 83%);
+    font-size: 0.8em;
+    word-spacing: 2px;
+    display: inline-block;
+    margin-left: 55px;
+  }
+  .ticket-container main .ticket-main {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .ticket-container main .ticket-main img {
+    object-fit: cover;
+    width: 4.25rem;
+    height: 4.25rem;
+    border-radius: 8px;
+  }
+  .ticket-container main .ticket-main #ticket-info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 2px;
+  }
+  .ticket-container main .ticket-main #ticket-info #ticket-name {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+
+  .ticket-container main .ticket-main #ticket-info span {
+    color: hsl(252, 6%, 83%);
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+  }
+
+  #username{
+    font-size: 1.25rem;
+  }
+  .ticket-container main .ticket-main #ticket-info span svg {
+    width: 17px;
+  }
+  .ticket-container main .ticket-id {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    position: relative;
+  }
+  .ticket-container main .ticket-id span {
+    color: hsl(245, 15%, 58%);
+    transform: rotate(90deg);
+    font-size: 1.3em;
+    margin-right: -15px !important;
+  }
+  
+  
+  @media (max-width: 1200px) {
+    header h2 {
+      margin: 25px 0 15px 0;
+      font-size: 2.7em;
+      padding: 0 20px !important;
+      width: 60%;
+    }
+    
+  }
+
+  @media (max-width: 1000px) {
+    body {
+      background-image: url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-squiggly-line-bottom-desktop.svg"), url("../images/pattern-circle.svg"), url("../images/background-desktop.png");
+      background-size: 290px, 90px, auto, 500px, 200px, cover;
+      background-position: right 65px, -17px -25px, center, left bottom, 700px 54%, right bottom;
+    }
+
+    header h2 {
+      font-size: 2.4em;
+      width: 70%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    body {
+      background-image: url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("../images/pattern-circle.svg"), url("../images/background-tablet.png");
+      background-size: 190px, 90px, auto, 400px, 170px, cover;
+      background-position: right 52px, -17px -25px, center, left bottom, 570px 48%, right bottom;
+    }
+
+    header h2 {
+      margin: 25px 0 15px 0;
+      font-size: 2.35em;
+      padding: 0 20px !important;
+      width: 80%;
+    }
+    .ticket-container header h1 {
+      font-size: 2.2em !important;
+    }
+    .ticket-container .ticket {
+      margin-top: 100px !important;
+    }
+    .ticket-container #notification {
+      font-size: 0.8em !important;
+    }
+  }
+
+  @media (max-width: 615px) {
+    body {
+      background-position: right 52px, -17px -25px, center, left bottom, 100% 58%, right bottom;
+    }
+
+    header h2 {
+      font-size: 1.5rem;
+      width: 100%;
+    }
+
+    header p {
+      font-size: 18px;
+    }
+  }
