@@ -85,4 +85,4 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 ## Author
 
 - Website - [Osaaroh](https://osaaroh.vercel.app/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/osaaroh)
+- Frontend Mentor - [@Osaaroh](https://www.frontendmentor.io/profile/osaaroh)
