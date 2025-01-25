@@ -29,7 +29,7 @@ body .container {
 .brand-logo svg {
   width: 200px;
 }
-header {
+.hero {
     padding: 7px;
     text-align: center;
     margin-bottom: 20px;
@@ -39,14 +39,14 @@ header {
     justify-content: center;
     gap: 0;
 }
-header h2 {
+.hero h1 {
     text-transform: capitalize;
     margin-bottom: 15px;
     font-size: 58px;
     width: 60%;
     margin-bottom: 2rem;
   }
-header p {
+.hero p {
     font-size: 24px;
     font-weight: 400;
     padding: 4px 10px;
@@ -254,25 +254,25 @@ header p {
   .form-group:last-child button:focus {
     background-color: hsl(7, 88%, 67%);
   }
-  .ticket-container header {
+  .ticket-container .hero {
     padding: 10px;
     font-size: 0.9em;
   }
-  .ticket-container header h1 {
+  .ticket-container .hero h1 {
     text-transform: capitalize;
     margin-bottom: 15px;
     font-size: 58px;
     width: 60%;
     margin-bottom: 2rem;
   }
-  .ticket-container header h1 .name-group {
+  .ticket-container .hero h1 .name-group {
     background-image: linear-gradient(to right, hsl(7, 88%, 67%), hsl(0, 0%, 100%));
     -webkit-background-clip: text;
             background-clip: text;
     text-transform: capitalize;
     color: transparent;
   }
-  .ticket-container main #notification {
+  .ticket-container div #notification {
     text-align: center;
     margin: 0 auto 40px auto;
     padding: 0 2px 20px 2px;
@@ -286,10 +286,10 @@ header p {
     padding: 4px 10px;
     word-spacing: 1px;
   }
-  .ticket-container main #notification #your-email {
+  .ticket-container div #notification #your-email {
     color: hsl(7, 88%, 67%);
   }
-  .ticket-container main .ticket {
+  .ticket-container div .ticket {
     display: flex;
     flex-direction: row;
     align-items: left;
@@ -306,32 +306,32 @@ header p {
     padding: 15px;
     border-radius: 7px;
   }
-  .ticket-container main .main-info {
+  .ticket-container div .main-info {
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: space-between;
     gap: 15px;
   }
-  .ticket-container main .ticket-logo {
+  .ticket-container div .ticket-logo {
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
     gap: 4px;
   }
-  .ticket-container main .ticket-logo svg {
+  .ticket-container div .ticket-logo svg {
     width: 225px;
     margin-top: 1rem;
   }
-  .ticket-container main .ticket-logo #ticket-date {
+  .ticket-container div .ticket-logo #ticket-date {
     color: hsl(252, 6%, 83%);
     font-size: 0.8em;
     word-spacing: 2px;
     display: inline-block;
     margin-left: 55px;
   }
-  .ticket-container main .ticket-main {
+  .ticket-container div .ticket-main {
     width: -moz-fit-content;
     width: fit-content;
     display: flex;
@@ -340,20 +340,20 @@ header p {
     justify-content: space-between;
     gap: 12px;
   }
-  .ticket-container main .ticket-main img {
+  .ticket-container div .ticket-main img {
     object-fit: cover;
     width: 4.25rem;
     height: 4.25rem;
     border-radius: 8px;
   }
-  .ticket-container main .ticket-main #ticket-info {
+  .ticket-container div .ticket-main #ticket-info {
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
     gap: 2px;
   }
-  .ticket-container main .ticket-main #ticket-info #ticket-name {
+  .ticket-container div .ticket-main #ticket-info #ticket-name {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -363,7 +363,7 @@ header p {
     font-weight: 400;
   }
 
-  .ticket-container main .ticket-main #ticket-info span {
+  .ticket-container div .ticket-main #ticket-info span {
     color: hsl(252, 6%, 83%);
     text-align: left;
     display: flex;
@@ -376,10 +376,10 @@ header p {
   #username{
     font-size: 1.25rem;
   }
-  .ticket-container main .ticket-main #ticket-info span svg {
+  .ticket-container div .ticket-main #ticket-info span svg {
     width: 17px;
   }
-  .ticket-container main .ticket-id {
+  .ticket-container div .ticket-id {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -387,7 +387,7 @@ header p {
     gap: 0;
     position: relative;
   }
-  .ticket-container main .ticket-id span {
+  .ticket-container div .ticket-id span {
     color: hsl(245, 15%, 58%);
     transform: rotate(90deg);
     font-size: 1.3em;
@@ -396,7 +396,7 @@ header p {
   
   
   @media (max-width: 1200px) {
-    header h2 {
+    .hero h1 {
       margin: 25px 0 15px 0;
       font-size: 2.7em;
       padding: 0 20px !important;
@@ -412,7 +412,7 @@ header p {
       background-position: right 65px, -17px -25px, center, left bottom, 700px 54%, right bottom;
     }
 
-    header h2 {
+    .hero h1 {
       font-size: 2.4em;
       width: 70%;
     }
@@ -425,13 +425,13 @@ header p {
       background-position: right 52px, -17px -25px, center, left bottom, 570px 48%, right bottom;
     }
 
-    header h2 {
+    .hero h1 {
       margin: 25px 0 15px 0;
       font-size: 2.35em;
       padding: 0 20px !important;
       width: 80%;
     }
-    .ticket-container header h1 {
+    .ticket-container .hero h1 {
       font-size: 2.2em !important;
     }
     .ticket-container .ticket {
@@ -447,12 +447,12 @@ header p {
       background-position: right 52px, -17px -25px, center, left bottom, 100% 58%, right bottom;
     }
 
-    header h2 {
+    .hero h1 {
       font-size: 1.5rem;
       width: 100%;
     }
 
-    header p {
+    .hero p {
       font-size: 18px;
     }
   }
