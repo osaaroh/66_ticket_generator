@@ -163,6 +163,8 @@ window.addEventListener('load', function () {
         if (imageInput.files.length === 0) {
             setError(imageInput, 'Please upload your image.');
         } else if (imageInput?.files[0]?.size > 500000) {
+            // File size limit (500 KB)
+            // const FILE_SIZE_LIMIT = 500 * 1024;
             setError(imageInput, 'File too large. Please upload a photo under 500KB.');
         } else if (imageInput?.files[0]?.type.split('/')[0] != "image") {
             setError(imageInput, 'Please upload a valid image file.');
