@@ -11,9 +11,9 @@
 }
   
 body {
-  background-image: url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-squiggly-line-bottom-desktop.svg"), url("../images/pattern-circle.svg"), url("../images/background-mobile.png");
+  background-image: url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-squiggly-line-bottom-desktop.svg"), url("../images/pattern-circle.svg"), url("../images/background-desktop.png");
   background-repeat: no-repeat;
-  background-position: right 55px, -17px -95px, center, left bottom, 70% 54%, right bottom;
+  background-position: right 55px, -17px -95px, center 0px, left bottom, 70% 54%, right bottom;
   background-size: 300px, 190px, auto, 250px, 190px, cover;
   padding-bottom: 60px;
   min-height: 100vh;
@@ -409,7 +409,7 @@ body .container {
     body {
       background-image: url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-squiggly-line-bottom-desktop.svg"), url("../images/pattern-circle.svg"), url("../images/background-desktop.png");
       background-size: 290px, 90px, auto, 500px, 200px, cover;
-      background-position: right 65px, -17px -25px, center, left bottom, 700px 54%, right bottom;
+      background-position: right 65px, -17px -25px, center 0px, left bottom, 700px 54%, right bottom;
     }
 
     .hero h1 {
@@ -422,7 +422,7 @@ body .container {
     body {
       background-image: url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("../images/pattern-circle.svg"), url("../images/background-tablet.png");
       background-size: 190px, 90px, auto, 400px, 170px, cover;
-      background-position: right 52px, -17px -25px, center, left bottom, 570px 48%, right bottom;
+      background-position: right 52px, -17px -25px, center 0px, left bottom, 570px 48%, right bottom;
     }
 
     .hero h1 {
@@ -444,7 +444,8 @@ body .container {
 
   @media (max-width: 615px) {
     body {
-      background-position: right 52px, -17px -25px, center, left bottom, 100% 58%, right bottom;
+      background-image: url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("../images/pattern-circle.svg"), url("../images/background-mobile.png");
+      background-position: right 52px, -17px -25px, center 0px, left bottom, 100% 58%, right bottom;
     }
 
     .hero h1 {
