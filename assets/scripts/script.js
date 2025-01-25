@@ -132,7 +132,7 @@ window.addEventListener('load', function () {
     const username = document.querySelector('#github-username');
     const imageInput = document.querySelector('#avatar');
     const validateForm = function () {
-        // checking if the fields are empty or not valid input in the form
+        // checking if the fields are empty or valid and setting error if not
         if (fullName.value === '') {
             setError(fullName, 'Please enter your full name.');
         } else {

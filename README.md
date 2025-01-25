@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [live site URL](https://ticket-generator-o.netlify.app/)
+
 
 ## My process
 
@@ -84,5 +84,5 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Osaaroh](https://osaaroh.vercel.app/)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/osaaroh)
