@@ -1,20 +1,20 @@
-// Ensuring everything is loaded before running the script
+// Load everything before running script
 window.addEventListener('load', function () {
     // A function for setting error
     const setError = (element, message) => {
         if (element.id === 'avatar') {
             const parentElement = element.parentElement.parentElement.parentElement;
-            const mainError = parentElement.querySelector('p');
+            const errorElement = parentElement.querySelector('p');
             parentElement.querySelector('.error').classList.remove('instruction-2');
             parentElement.querySelector('.error').style.display = 'flex';
-            mainError.textContent = message;
+            errorElement.textContent = message;
         } else {
             const parentElement = element.parentElement.parentElement;
-            const mainError = parentElement.querySelector('p');
+            const errorElement = parentElement.querySelector('p');
             const inputWrapper = parentElement.querySelector('.input-wrapper');
             inputWrapper.parentElement.classList.add('error-wrapper');
             element.parentElement.parentElement.querySelector('.error').style.display = 'flex';
-            mainError.textContent = message;
+            errorElement.textContent = message;
         }
     }
 
@@ -35,7 +35,6 @@ window.addEventListener('load', function () {
     const uploadInput = document.querySelector('#avatar');
     uploadInput.addEventListener('change', function (e) {
         if (this.files && this.files[0]) {
-            console.log(e);
             console.log(this.files);
             const imageArea = document.querySelector('img');
             const mainIcon = document.querySelector('.main-icon');
@@ -52,7 +51,7 @@ window.addEventListener('load', function () {
         }
 
     });
-    // listening to the drag and drop event
+    // listening to the dragover event
     uploadContainer.addEventListener('dragover', function (e) {
         e.preventDefault();
     });
@@ -70,8 +69,7 @@ window.addEventListener('load', function () {
     // Dropping image
     uploadContainer.addEventListener('drop', function (e) {
         e.preventDefault();
-        console.log(e);
-        console.log(e.dataTransfer.files);
+        // console.log(e.dataTransfer.files);
         if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
             const file = e.dataTransfer.files[0];
             console.log("File type:", file);
@@ -113,7 +111,7 @@ window.addEventListener('load', function () {
     const formInputs = document.querySelectorAll('input[type="text"]');
     formInputs.forEach(input => {
         input.addEventListener('input', function (e) {
-            checkForm();
+            validateForm();
         });
     });
     // A function for generating a random ticket id
@@ -133,7 +131,7 @@ window.addEventListener('load', function () {
     const emailAddress = document.querySelector('#email-address');
     const username = document.querySelector('#github-username');
     const imageInput = document.querySelector('#avatar');
-    const checkForm = function () {
+    const validateForm = function () {
         // checking if the fields are empty or not valid input in the form
         if (fullName.value === '') {
             setError(fullName, 'Please enter your full name.');
@@ -174,9 +172,8 @@ window.addEventListener('load', function () {
         return document.querySelectorAll('.error-wrapper').length === 0 && window.getComputedStyle(document.querySelector('.error').parentElement.querySelector('p')).color === 'rgb(255, 255, 255)' ? false : true;
     }
     myForm.addEventListener('submit', function (e) {
-        console.log(imageInput.value);
         e.preventDefault();
-        checkForm();
+        validateForm();
         if (!errorExist()) {
             const ticketContainer = document.querySelector('.ticket-container');
             const name = fullName.value;
