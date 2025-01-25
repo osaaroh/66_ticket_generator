@@ -56,6 +56,11 @@ window.addEventListener('load', function () {
         e.preventDefault();
     });
 
+    // listening to the dragleave event - Can do without this, just putting this for learning purposes
+    uploadContainer.addEventListener("dragleave", (e) => {
+        e.preventDefault();
+        console.log("dragLeave");
+    });
     // Resetting image
     const resetImage = () => {
         document.querySelector('.instruction').style.display = 'block';
@@ -167,6 +172,12 @@ window.addEventListener('load', function () {
         }
     }
 
+    const dateHelper =()=>{
+        const currentDate = new Date();
+        const options = { month: 'short', day: 'numeric', year: 'numeric' };
+        return currentDate.toLocaleDateString('en-US', options);
+    }
+
     const myForm = document.querySelector('#form');
     const errorExist = () => {
         return document.querySelectorAll('.error-wrapper').length === 0 && window.getComputedStyle(document.querySelector('.error').parentElement.querySelector('p')).color === 'rgb(255, 255, 255)' ? false : true;
@@ -182,6 +193,7 @@ window.addEventListener('load', function () {
             const middleName = name.split(' ')[2] === undefined ? '' : " " + name.split(' ')[2];
 
             // updating the ticket details
+            ticketContainer.querySelector('#ticket-date').textContent = dateHelper() + " / Austin, TX ";
             ticketContainer.querySelector('.name1').textContent = firstName;
             ticketContainer.querySelector('.name2').textContent = lastName;
             ticketContainer.querySelector('.name3').textContent = middleName;
